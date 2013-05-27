@@ -2,12 +2,81 @@
  * dashmoar CSS framework
  **/
 
-$mycolor: #666;
+$bg_body: #DDD;
+$bg_header: #EEE;
+$bg_item: #F2F2F2;
+$gutter: 10px;
+$radius: 5px;
 
-body {
-    background: $mycolor;
+html {
+    background: $bg_body;
+    font-size: 62.5%;
+    margin: $gutter;
+}
+
+header {
+    background: $bg_header;
+    border-radius: $radius;
+    padding: $gutter;
+    margin-bottom: $gutter;
+    h1 {
+        margin: 0;
+        font-size: 1.6rem;
+        float: left;
+    }
+    ul {
+        float: right;
+        padding: 0;
+        margin: 0;
+        li {
+            font-size: 1.6rem;
+            margin: 0 0 0 1em;
+            display: inline-block;
+        }
+    }
+
 }
 
 .dashmoar-grid {
+
+    ul {
+        padding: 0;
+        margin: 0 -0.5% 0 -0.5%;
+    }
+
+    .dashmoar-item {
+        width: 24%;
+        padding-bottom: 24%;
+        float: left;
+        background: $bg_item;
+        list-style: none;
+        margin: 0 0.5% 1% 0.5%; 
+        border-radius: $radius;
+        position: relative;
+        p {
+            position: absolute;
+        }
+    }
     
+}
+
+
+
+
+/*
+ * Helpers
+ */
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
 }
